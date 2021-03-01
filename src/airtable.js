@@ -5,9 +5,9 @@ const Airtable = require("airtable");
 const base = new Airtable({ apiKey: process.env.AIRTABLE_API_KEY }).base("appPfAkOluijuGY1T");
 
 class AirtableClass {
-    async createRecord(tableName, record) {
+    async createRecord(record) {
         return new Promise((resolve, reject) => {
-            base(tableName).create(record, (err, record) => {
+            base("BlueBook Contacts").create(record, (err, record) => {
                 if (err) {
                     console.error(err);
                     reject(err);

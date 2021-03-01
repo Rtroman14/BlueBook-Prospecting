@@ -108,10 +108,7 @@ const scrapeLinkedin = async () => {
 
                     let contactProfileAirtable = convertToAirtableRecord(contactProfile);
 
-                    let airtableRecordID = await AirtableClass.createRecord(
-                        client,
-                        contactProfileAirtable
-                    );
+                    let airtableRecordID = await AirtableClass.createRecord(contactProfileAirtable);
 
                     let contactProfileMongoDB = {
                         ...contactProfile,

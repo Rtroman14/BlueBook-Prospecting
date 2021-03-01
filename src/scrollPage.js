@@ -52,9 +52,7 @@ module.exports = async (page, user) => {
                     await MongoDB.addConnection(client, connection);
                 }
 
-                const lastContacts = newConnections.slice(-2);
-
-                for (let contact of lastContacts) {
+                for (let contact of newConnections.slice(-2)) {
                     await MongoDB.addLastConnections(client, contact);
                 }
 
