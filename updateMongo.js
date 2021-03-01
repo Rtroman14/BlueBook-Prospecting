@@ -25,30 +25,6 @@ const updateCookie = async (client, cookie) => {
     }
 };
 
-const newUser = {
-    client: "Keith Keller",
-    lastRun: "10/16/2020",
-    cookie:
-        "AQEDARNbnawBPUMeAAABdm0bWDQAAAF2kSfcNE4AhzJ2FJamVjtffSq-DML75r-cov7kMqzan82SqnJEmydkbKiUqH0iQsasfOvlMkmh9dOURGpi24nGQznYzr-O6EbvomDONOBx0k0k0lNQtj5QoOfb",
-    cookieStatus: true,
-    proxyUsername: "",
-    proxyPassword: "",
-    scriptMode: "Initial",
-    httpRequestCount: 0,
-    airtableRecordID: "recPD2v7p6YxCgD77",
-};
-
-const lastConnections = [
-    {
-        name: "Steve Layton",
-        profileUrl: "https://www.linkedin.com/in/steve-layton-a69679139/",
-    },
-    {
-        name: "Vicente Cantua - Investment Sales",
-        profileUrl: "https://www.linkedin.com/in/vicente-cantua-investment-sales-232b0119/",
-    },
-];
-
 (async () => {
     try {
         // -------------- UPDATE COOKIE --------------
@@ -58,29 +34,7 @@ const lastConnections = [
             await updateCookie(name, cookie);
             console.log(`Updated ${name}'s cookies`);
         }
-
-        // -------------- ADD LAST CONNECTIONS --------------
-        // await MongoDB.updateLastConnections(client, newConnections);
-        // -------------- ADD NEW USER --------------
-        // await MongoDB.createUser(newUser);
-        // console.log("Done");
-        // -------------- ADD LASTCONNECTIONS --------------
-        // for (let contact of lastConnections) {
-        //     await MongoDB.addLastConnections(client, contact);
-        //     console.log("Added ", contact.name);
-        // }
     } catch (error) {
         console.log(`UPDATE MONGO ERROR --- ${error}`);
     }
 })();
-
-const newConnections = [
-    {
-        name: "New Connection 1",
-        profileUrl: "https://www.linkedin.com/",
-    },
-    {
-        name: "New Connection 2",
-        profileUrl: "https://www.linkedin.com/",
-    },
-];
