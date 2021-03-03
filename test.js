@@ -40,20 +40,12 @@ const newUser = {
 (async () => {
     try {
         // -------------- ADD NEW USER --------------
-        await MongoDB.createUser(newUser);
-        console.log("Done");
+        // await MongoDB.createUser(newUser);
+        // console.log("Done");
+        // -------------- TEST --------------
+        // const lastConnections = await MongoDB.test("Nick Peret");
+        // console.log(lastConnections);
     } catch (error) {
         console.log(`UPDATE MONGO ERROR --- ${error}`);
     }
 })();
-
-const newConnections = [
-    {
-        name: "New Connection 1",
-        profileUrl: "https://www.linkedin.com/",
-    },
-    {
-        name: "New Connection 2",
-        profileUrl: "https://www.linkedin.com/",
-    },
-];
