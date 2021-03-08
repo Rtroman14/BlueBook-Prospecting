@@ -7,7 +7,7 @@ const base = new Airtable({ apiKey: process.env.AIRTABLE_API_KEY }).base("appPfA
 class AirtableClass {
     async createRecord(record) {
         return new Promise((resolve, reject) => {
-            base("BlueBook Contacts").create(record, (err, record) => {
+            base("First Line Ready - BlueBook").create(record, (err, record) => {
                 if (err) {
                     console.error(err);
                     reject(err);
