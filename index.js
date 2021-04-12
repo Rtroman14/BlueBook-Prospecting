@@ -51,13 +51,13 @@ const scrapeLinkedin = async () => {
     try {
         const browser = await puppeteer.launch({
             headless: true,
-            // args: [
-            // "--proxy-server=zproxy.lum-superproxy.io:22225",
-            // "--no-sandbox",
-            // "--disable-setuid-sandbox",
-            // "--disable-dev-shm-usage",
-            // "--disable-gpu",
-            // ],
+            args: [
+                "--proxy-server=zproxy.lum-superproxy.io:22225",
+                // "--no-sandbox",
+                // "--disable-setuid-sandbox",
+                // "--disable-dev-shm-usage",
+                // "--disable-gpu",
+            ],
         });
 
         const page = await browser.newPage();

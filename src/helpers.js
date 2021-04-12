@@ -84,6 +84,7 @@ module.exports = {
             "LinkedIn Page": contactProfile.profileUrl,
             "Date Connected": contactProfile.connected,
             Birthday: contactProfile.birthday,
+            Tag: "bluebook",
         };
     },
 };

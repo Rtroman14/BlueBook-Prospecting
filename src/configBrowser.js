@@ -2,10 +2,10 @@ module.exports = async (page, linkedinAccount) => {
     try {
         const { proxyUsername, proxyPassword, cookie } = linkedinAccount;
 
-        // await page.authenticate({
-        //     username: proxyUsername,
-        //     password: proxyPassword,
-        // });
+        await page.authenticate({
+            username: "lum-customer-c_97c7611f-zone-static_res-ip-154.17.60.190",
+            password: "syaj3svugg2e",
+        });
 
         await page.setViewport({ width: 1366, height: 768 });
 
@@ -13,7 +13,7 @@ module.exports = async (page, linkedinAccount) => {
 
         // robot detection incognito - console.log(navigator.userAgent);
         page.setUserAgent(
-            "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.125 Safari/537.36"
+            "Mozilla/5.0 (Macintosh; Intel Mac OS X 11_2_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.90 Safari/537.36"
         );
 
         page.on("request", (request) => {
