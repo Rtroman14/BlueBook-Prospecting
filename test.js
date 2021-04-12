@@ -7,11 +7,11 @@ const AirtableClass = require("./src/airtable");
 const MongoDB = require("./mongoDB/index");
 const mongoose = require("mongoose");
 
-mongoose.connect(process.env.MONGO_DB, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-    useFindAndModify: false,
-});
+// mongoose.connect(process.env.MONGO_DB, {
+//     useNewUrlParser: true,
+//     useUnifiedTopology: true,
+//     useFindAndModify: false,
+// });
 
 const updateCookie = async (client, cookie) => {
     try {
@@ -45,6 +45,8 @@ const newUser = {
         // -------------- TEST --------------
         // const lastConnections = await MongoDB.test("Nick Peret");
         // console.log(lastConnections);
+        //
+        //
     } catch (error) {
         console.log(`UPDATE MONGO ERROR --- ${error}`);
     }

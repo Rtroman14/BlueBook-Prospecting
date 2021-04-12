@@ -74,17 +74,19 @@ module.exports = {
 
     convertToAirtableRecord(contactProfile) {
         return {
-            "First Name": contactProfile.firstName,
-            "Last Name": contactProfile.lastName,
-            Job: contactProfile.job,
-            City: contactProfile.city,
-            Company: contactProfile.company,
-            Email: contactProfile.email,
-            "Phone Number": contactProfile.phone,
-            "LinkedIn Page": contactProfile.profileUrl,
-            "Date Connected": contactProfile.connected,
-            Birthday: contactProfile.birthday,
+            "Full Name": `${contactProfile.firstName} ${contactProfile.lastName}`,
+            "First Name": contactProfile.firstName || "",
+            "Last Name": contactProfile.lastName || "",
+            Job: contactProfile.job || "",
+            City: contactProfile.city || "",
+            "Company Name": contactProfile.company || "",
+            Email: contactProfile.email || "",
+            "Phone Number": contactProfile.phone || "",
+            "LinkedIn Page": contactProfile.profileUrl || "",
+            "Date Connected": contactProfile.connected || "",
+            Birthday: contactProfile.birthday || "",
             Tag: "bluebook",
+            Outreach: "Email",
         };
     },
 };
